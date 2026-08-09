@@ -1,0 +1,77 @@
+{
+  "definitions": [
+    {
+      "title": "Subscribe",
+      "id": "subscribe",
+      "model": "subscribe",
+      "filter": "subscribe",
+      "plugins": {
+        "da": {
+          "name": "subscribe",
+          "rows": 1,
+          "columns": 2
+        }
+      }
+    },
+    {
+      "title": "Subscribe Item",
+      "id": "subscribe-item",
+      "model": "subscribe-item",
+      "plugins": {
+        "da": {
+          "name": "subscribe-item",
+          "rows": 2,
+          "columns": 0,
+          "fields": [
+            { "name": "title", "selector": "div:nth-child(1)" },
+            { "name": "description", "selector": "div:nth-child(2)" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "subscribe",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "backgroundImage",
+          "label": "Background Image",
+          "multi": false,
+          "metaData": {
+            "editor": "aem-assets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "subscribe-item",
+      "fields": [
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "title",
+          "label": "Label",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "valueType": "string",
+          "name": "description",
+          "label": "Button Text",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "subscribe",
+      "components": [
+        "subscribe-item"
+      ]
+    }
+  ]
+}

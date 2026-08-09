@@ -1,0 +1,98 @@
+{
+  "definitions": [
+    {
+      "title": "Spotlight",
+      "id": "spotlight",
+      "model": "spotlight",
+      "filter": "spotlight",
+      "plugins": {
+        "da": {
+          "name": "spotlight",
+          "rows": 1,
+          "columns": 2
+        }
+      }
+    },
+    {
+      "title": "Spotlight Item",
+      "id": "spotlight-item",
+      "model": "spotlight-item",
+      "plugins": {
+        "da": {
+          "name": "spotlight-item",
+          "rows": 1,
+          "columns": 0,
+          "fields": [
+            { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+            { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+            { "name": "videoUrl", "selector": "div:nth-child(1)>a[href]" },
+            { "name": "text", "selector": "div:nth-child(2)" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "spotlight",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spotlight-item",
+      "fields": [
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "image",
+          "label": "Thumbnail Image",
+          "multi": false,
+          "metaData": {
+            "editor": "aem-assets"
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Image Alt Text",
+          "value": ""
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "videoUrl",
+          "label": "YouTube Video URL",
+          "description": "Paste a YouTube link (e.g. https://www.youtube.com/watch?v=...)",
+          "value": ""
+        },
+        {
+          "component": "richtext",
+          "name": "text",
+          "value": "",
+          "label": "Label Text",
+          "valueType": "string"
+        }
+      ]
+    }
+  ],
+  "filters": [
+    {
+      "id": "spotlight",
+      "components": [
+        "spotlight-item"
+      ]
+    }
+  ]
+}

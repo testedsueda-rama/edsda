@@ -3,15 +3,18 @@
     {
       "title": "Hero",
       "id": "hero",
+      "model": "hero",
       "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Hero",
-              "model": "hero"
-            }
-          }
+        "da": {
+          "name": "hero",
+          "rows": 1,
+          "columns": 1,
+          "fields": [
+            { "name": "image", "selector": "div>div>picture>img[src]" },
+            { "name": "imageAlt", "selector": "div>div>picture>img[alt]" },
+            { "name": "video", "selector": "div>div>a[href]" },
+            { "name": "text", "selector": "div>div:nth-child(2)" }
+          ]
         }
       }
     }
@@ -24,15 +27,30 @@
           "component": "reference",
           "valueType": "string",
           "name": "image",
-          "label": "Image",
-          "multi": false
+          "label": "Background Image",
+          "description": "Fallback image if no video is set",
+          "multi": false,
+          "metaData": {
+            "editor": "aem-assets"
+          }
         },
         {
           "component": "text",
           "valueType": "string",
           "name": "imageAlt",
-          "label": "Alt",
+          "label": "Image Alt Text",
           "value": ""
+        },
+        {
+          "component": "reference",
+          "valueType": "string",
+          "name": "video",
+          "label": "Background Video (MP4)",
+          "description": "Upload an MP4 video to use as hero background",
+          "multi": false,
+          "metaData": {
+            "editor": "aem-assets"
+          }
         },
         {
           "component": "richtext",

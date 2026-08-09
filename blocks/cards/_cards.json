@@ -3,35 +3,51 @@
     {
       "title": "Cards",
       "id": "cards",
+      "model": "cards",
+      "filter": "cards",
       "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block",
-            "template": {
-              "name": "Cards",
-              "filter": "cards"
-            }
-          }
+        "da": {
+          "name": "cards",
+          "rows": 1,
+          "columns": 2
         }
       }
     },
     {
       "title": "Card",
       "id": "card",
+      "model": "card",
       "plugins": {
-        "xwalk": {
-          "page": {
-            "resourceType": "core/franklin/components/block/v1/block/item",
-            "template": {
-              "name": "Card",
-              "model": "card"
-            }
-          }
+        "da": {
+          "name": "card",
+          "rows": 1,
+          "columns": 0,
+          "fields": [
+            { "name": "image", "selector": "div:nth-child(1)>picture>img[src]" },
+            { "name": "imageAlt", "selector": "div:nth-child(1)>picture>img[alt]" },
+            { "name": "text", "selector": "div:nth-child(2)" }
+          ]
         }
       }
     }
   ],
   "models": [
+    {
+      "id": "cards",
+      "fields": [
+        {
+          "component": "multiselect",
+          "name": "classes",
+          "label": "Style",
+          "options": [
+            {
+              "name": "Highlight",
+              "value": "highlight"
+            }
+          ]
+        }
+      ]
+    },
     {
       "id": "card",
       "fields": [
@@ -40,7 +56,17 @@
           "valueType": "string",
           "name": "image",
           "label": "Image",
-          "multi": false
+          "multi": false,
+          "metaData": {
+            "editor": "aem-assets"
+          }
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "imageAlt",
+          "label": "Image Alt Text",
+          "value": ""
         },
         {
           "component": "richtext",

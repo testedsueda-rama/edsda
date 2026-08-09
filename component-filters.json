@@ -19,6 +19,12 @@
     ]
   },
   {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
@@ -27,16 +33,42 @@
   {
     "id": "columns",
     "components": [
-      "column"
-    ]
-  },
-  {
-    "id": "column",
-    "components": [
       "text",
       "image",
       "button",
-      "title"
+      "title",
+      "youtube",
+      "countries"
+    ]
+  },
+  {
+    "id": "spotlight",
+    "components": [
+      "spotlight-item"
+    ]
+  },
+  {
+    "id": "stats",
+    "components": [
+      "stat-item"
+    ]
+  },
+  {
+    "id": "subscribe",
+    "components": [
+      "subscribe-item"
+    ]
+  },
+  {
+    "id": "tabs",
+    "components": [
+      "tab-item"
+    ]
+  },
+  {
+    "id": "trusted-section",
+    "components": [
+      "trusted-section-item"
     ]
   }
 ]

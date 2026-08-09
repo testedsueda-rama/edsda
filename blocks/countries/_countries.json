@@ -1,0 +1,31 @@
+{
+  "definitions": [
+    {
+      "title": "Countries",
+      "id": "countries",
+      "model": "countries",
+      "plugins": {
+        "da": {
+          "name": "countries",
+          "rows": 1,
+          "columns": 1
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "countries",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "label",
+          "label": "Dropdown Label",
+          "value": "Select a Country"
+        }
+      ]
+    }
+  ],
+  "filters": []
+}

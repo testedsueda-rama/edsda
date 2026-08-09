@@ -83,77 +83,376 @@
       "id": "blocks",
       "components": [
         {
+          "title": "Accordion",
+          "id": "accordion",
+          "model": "accordion",
+          "filter": "accordion",
+          "plugins": {
+            "da": {
+              "name": "accordion",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Accordion Item",
+          "id": "accordion-item",
+          "model": "accordion-item",
+          "plugins": {
+            "da": {
+              "name": "accordion-item",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
           "title": "Cards",
           "id": "cards",
+          "model": "cards",
+          "filter": "cards",
           "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Cards",
-                  "filter": "cards"
-                }
-              }
+            "da": {
+              "name": "cards",
+              "rows": 1,
+              "columns": 2
             }
           }
         },
         {
           "title": "Card",
           "id": "card",
+          "model": "card",
           "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block/item",
-                "template": {
-                  "name": "Card",
-                  "model": "card"
+            "da": {
+              "name": "card",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
                 }
-              }
+              ]
             }
           }
         },
         {
           "title": "Columns",
           "id": "columns",
+          "model": "columns",
+          "filter": "columns",
           "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/columns/v1/columns",
-                "template": {
-                  "columns": "2",
-                  "rows": "1"
+            "da": {
+              "name": "columns",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Countries",
+          "id": "countries",
+          "model": "countries",
+          "plugins": {
+            "da": {
+              "name": "countries",
+              "rows": 1,
+              "columns": 1
+            }
+          }
+        },
+        {
+          "title": "Embed",
+          "id": "embed",
+          "model": "embed",
+          "plugins": {
+            "da": {
+              "name": "embed",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "url",
+                  "selector": "div>div>a[href]"
                 }
-              }
+              ]
             }
           }
         },
         {
           "title": "Fragment",
           "id": "fragment",
+          "model": "fragment",
           "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Fragment",
-                  "model": "fragment"
+            "da": {
+              "name": "fragment",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "reference",
+                  "selector": "div>div>a[href]"
                 }
-              }
+              ]
             }
           }
         },
         {
           "title": "Hero",
           "id": "hero",
+          "model": "hero",
           "plugins": {
-            "xwalk": {
-              "page": {
-                "resourceType": "core/franklin/components/block/v1/block",
-                "template": {
-                  "name": "Hero",
-                  "model": "hero"
+            "da": {
+              "name": "hero",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div>div>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div>div>picture>img[alt]"
+                },
+                {
+                  "name": "video",
+                  "selector": "div>div>a[href]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div>div:nth-child(2)"
                 }
-              }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Spotlight",
+          "id": "spotlight",
+          "model": "spotlight",
+          "filter": "spotlight",
+          "plugins": {
+            "da": {
+              "name": "spotlight",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Spotlight Item",
+          "id": "spotlight-item",
+          "model": "spotlight-item",
+          "plugins": {
+            "da": {
+              "name": "spotlight-item",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "videoUrl",
+                  "selector": "div:nth-child(1)>a[href]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Stats",
+          "id": "stats",
+          "model": "stats",
+          "filter": "stats",
+          "plugins": {
+            "da": {
+              "name": "stats",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Stat Item",
+          "id": "stat-item",
+          "model": "stat-item",
+          "plugins": {
+            "da": {
+              "name": "stat-item",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "value",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "label",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Subscribe",
+          "id": "subscribe",
+          "model": "subscribe",
+          "filter": "subscribe",
+          "plugins": {
+            "da": {
+              "name": "subscribe",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Subscribe Item",
+          "id": "subscribe-item",
+          "model": "subscribe-item",
+          "plugins": {
+            "da": {
+              "name": "subscribe-item",
+              "rows": 2,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "description",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Tabs",
+          "id": "tabs",
+          "model": "tabs",
+          "filter": "tabs",
+          "plugins": {
+            "da": {
+              "name": "tabs",
+              "rows": 1,
+              "columns": 2
+            }
+          }
+        },
+        {
+          "title": "Tab",
+          "id": "tab-item",
+          "model": "tab-item",
+          "plugins": {
+            "da": {
+              "name": "tab-item",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "image",
+                  "selector": "div:nth-child(1)>picture>img[src]"
+                },
+                {
+                  "name": "imageAlt",
+                  "selector": "div:nth-child(1)>picture>img[alt]"
+                },
+                {
+                  "name": "text",
+                  "selector": "div:nth-child(2)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Trusted Section",
+          "id": "trusted-section",
+          "model": "trusted-section",
+          "filter": "trusted-section",
+          "plugins": {
+            "da": {
+              "name": "trusted-section",
+              "rows": 2,
+              "columns": 3
+            }
+          }
+        },
+        {
+          "title": "Trusted Section Item",
+          "id": "trusted-section-item",
+          "model": "trusted-section-item",
+          "plugins": {
+            "da": {
+              "name": "trusted-section-item",
+              "rows": 1,
+              "columns": 0,
+              "fields": [
+                {
+                  "name": "title",
+                  "selector": "div:nth-child(1)"
+                },
+                {
+                  "name": "icon",
+                  "selector": "div:nth-child(2)>picture>img[src]"
+                },
+                {
+                  "name": "description",
+                  "selector": "div:nth-child(3)"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "title": "Youtube",
+          "id": "youtube",
+          "model": "youtube",
+          "plugins": {
+            "da": {
+              "name": "youtube",
+              "rows": 1,
+              "columns": 1,
+              "fields": [
+                {
+                  "name": "url",
+                  "selector": "div>div>a[href]"
+                }
+              ]
             }
           }
         }

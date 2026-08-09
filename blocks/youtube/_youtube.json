@@ -1,0 +1,35 @@
+{
+  "definitions": [
+    {
+      "title": "Youtube",
+      "id": "youtube",
+      "model": "youtube",
+      "plugins": {
+        "da": {
+          "name": "youtube",
+          "rows": 1,
+          "columns": 1,
+          "fields": [
+            { "name": "url", "selector": "div>div>a[href]" }
+          ]
+        }
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "youtube",
+      "fields": [
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "url",
+          "label": "YouTube URL",
+          "description": "Paste a YouTube video link (e.g. https://www.youtube.com/watch?v=...)",
+          "value": ""
+        }
+      ]
+    }
+  ],
+  "filters": []
+}
