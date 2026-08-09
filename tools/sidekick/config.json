@@ -2,6 +2,6 @@
   "project": "EDS DA Live Client",
   "contentSourceUrl": "https://content.da.live/testedsueda-rama/edsda",
   "libs": [
-    "/tools/sidekick/library"
+    "https://main--edsda--testedsueda-rama.aem.page/tools/sidekick/library.html"
   ]
 }
