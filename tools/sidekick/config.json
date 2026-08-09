@@ -1,5 +1,7 @@
 {
-  "project": "AEM XWalk Boilerplate",
-  "editUrlLabel": "AEM Editor",
-  "editUrlPattern": "{{contentSourceUrl}}{{pathname}}?cmd=open"
+  "project": "EDS DA Live Client",
+  "contentSourceUrl": "https://content.da.live/testedsueda-rama/edsda",
+  "libs": [
+    "/tools/sidekick/library"
+  ]
 }
